@@ -77,4 +77,3 @@ class Player:
 		
 	def get_mana(self):
 		return self.mana
-a
