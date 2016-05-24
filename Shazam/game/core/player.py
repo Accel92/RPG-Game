@@ -41,12 +41,12 @@ class Player(object):
 			what_do = int(raw_input("\n>"))
 		except ValueError:
 			print "Can't use it, try again.\n"
-			return my_player.use_skill()
+			return self.use_skill()
 		
 		if what_do > number_of_skills:
 			print "This skill is not unclocked yet"
 			print "(or it doesn't exist).\nTry again"
-			return my_player.use_skill()
+			return self.use_skill()
 		else:
 			return skill_values[what_do - 1] # because iteration from 0
 
