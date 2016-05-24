@@ -2,7 +2,7 @@ from sys import exit
 import random
 import time
 
-class Fight:
+class Fight(object):
 	
 
 	def __init__(self, type_of_mob, mob_lvl):
