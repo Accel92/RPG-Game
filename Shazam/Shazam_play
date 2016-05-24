@@ -1,3 +1,4 @@
+'''
 from sys import exit
 import random
 import time
@@ -8,3 +9,4 @@ from game.core import Engine
 beginning = Map()
 engine1 = Engine(beginning)
 engine1.play()
+'''
