@@ -3,7 +3,7 @@ import random
 import time
 
 		
-class Engine:
+class Engine(object):
 	
 	def __init__(self, a_map):
 		self.map = a_map
