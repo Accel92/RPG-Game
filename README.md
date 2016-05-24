@@ -1,5 +1,6 @@
 # RPG-Game
 A console RPG game project in Python 2.7 ;)
+
 Work in progress:
   - Plot consists of test locations, player professions (skills, leveling, scaling) mobs
   - Game engine is done so game can be already run via double click on Shazam_play.py
