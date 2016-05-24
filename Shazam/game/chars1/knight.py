@@ -1,6 +1,6 @@
 from ..core import my_player
 
-class Knight:
+class Knight(object):
 
 	def skillset(self):
 		
