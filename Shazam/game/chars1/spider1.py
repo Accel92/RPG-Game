@@ -1,6 +1,6 @@
 from ..core import my_player
 
-class SpiderLv1:
+class SpiderLv1(object):
 	
 	name = "Spider"
 	fight_plot = "I am bad spider sama!"
