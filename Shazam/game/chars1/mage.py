@@ -1,6 +1,6 @@
 from ..core import my_player
 
-class Mage:
+class Mage(object):
 
 	def skillset(self):
 		
