@@ -9,12 +9,7 @@ class Map:
 	last_location = Boss()
 	
 	locations = { 
-	#'redhead_jew' : RedheadJew(),
 	'aryan' : AryanBunker(),
-	#'nigga' : NiggaPoopHut(),
-	#'gypsy' : GypsyWagon(),
-	#'muslim' : KebabMasterChef()
-	#'boss' = Boss()
 	}
 	
 	def get_first_location(self):
