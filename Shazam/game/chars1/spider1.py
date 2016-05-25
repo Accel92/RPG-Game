@@ -1,4 +1,5 @@
 from ..core import my_player
+import random
 
 class SpiderLv1(object):
 	
@@ -12,7 +13,7 @@ class SpiderLv1(object):
 	
 	def attack(self):
 		print "Spider bites you"
-		spider_dmg = 10
+		spider_dmg = random.randint(10, 17)
 		return spider_dmg
 	
 	def get_health(self):
