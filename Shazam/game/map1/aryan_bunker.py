@@ -5,7 +5,7 @@ import time
 from ..core import Fight
 from ..chars1 import SpiderLv1
 
-class AryanBunker:
+class AryanBunker(object):
 	
 	def start(self):
 		print "I am Aryan."
