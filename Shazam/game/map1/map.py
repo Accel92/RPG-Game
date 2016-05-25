@@ -3,7 +3,7 @@ from . import AryanBunker
 from . import Boss
 
 
-class Map:
+class Map(object):
 	
 	first_location = Welcome()
 	last_location = Boss()
