@@ -7,7 +7,7 @@ from ..chars1 import Mage
 
 from ..core import my_player
 
-class Welcome:
+class Welcome(object):
 	
 	def start(self):
 		
