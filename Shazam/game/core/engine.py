@@ -1,8 +1,3 @@
-from sys import exit
-import random
-import time
-
-		
 class Engine(object):
 	
 	def __init__(self, a_map):
