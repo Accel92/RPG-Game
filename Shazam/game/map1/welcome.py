@@ -6,14 +6,15 @@ from ..chars1 import Knight
 from ..chars1 import Mage
 
 from ..core import my_player
+from ..core.error_log import wrong_choice
 
 class Welcome(object):
 	
 	def start(self):
 		
 		print '''\n\n\t\t\t" SHAZAKIN "\n\n\n
-		\t  Chapter 1. The beginning\n
-		\nt's been a while since you were awake... young one
+		Chapter 1. The beginning\n
+		\nIt's been a while since you were awake... young one
 		\nI'm glad you finally regained consciousness, I've been wating.
 		\nYou might have lost your memories. It is such a cliche in this world,
 		\nbut looking at your confused face it is possible.
@@ -28,13 +29,17 @@ class Welcome(object):
 			if choose_name == "1":
 				print "Yes, what is it?\n"
 				name = raw_input("...my name is ")
+				name = name.capitalize()
+				if len(name) <= 2:
+					print "ERROR: invalid name, try again\n"
+					continue
 				break
 			elif choose_name == "2":
 				print "That's a pity, try again.\n"
 			else:
-				print "Wrong choice, try again"#wrong_choice
+				print wrong_choice
 		
-		setattr(my_player, "name", name)
+		my_player.name = name
 		print "\nThat is correct, %s, now then... " % my_player.get_name()
 		print "Who are you, what is your speciality "
 		
@@ -49,11 +54,11 @@ class Welcome(object):
 				spec = Mage()
 				break
 			else:
-				print "Wrong choice, try again\n"
+				print wrong_choice
 		
 		my_player.set_spec(spec)
 		my_player.set_skills()
-		print "%s, the %s" %(my_player.get_name(), my_player.spec.profession_name) + " that sounds good..."
+		print "%s, the %s" %(my_player.get_name(), my_player.spec.profession_name) + ", that sounds good..."
 		
 		while True:
 			print "\nWhat do you want to do now?\n"
@@ -77,7 +82,7 @@ class Welcome(object):
 				elif what_do_now == "2":
 					pass
 				else:
-					print "wrong choice\n" 	#wrong_choice
+					print error_log.wrong_choice
 			elif what_do == "3":
 				print "You can always leave whis world, is that what you wish for?"
 				yes_no = raw_input("1. Yes\n2. No\n>")
@@ -88,16 +93,18 @@ class Welcome(object):
 					print "Then let me take my leave now, good luck...\n"
 					break
 				else:
-					print "wrong choice\n"	#wrong_choice
+					print wrong_choice
 			else:
-				print "wrong choice\n"	#wrong_choice
+				print wrong_choice
 
 		print "We are done for now. I need to leave, take care %s" % my_player.get_name()
-		
+		print "press enter when ready to go"
+		raw_input()
 		print "We will proceed when we reach zero:\n"
-		i = 5
+		i = 3
 		while i > 0:
 			print i
 			i -= 1
 			time.sleep(1)
+		print ""
 		return 'aryan'
