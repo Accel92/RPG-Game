@@ -11,7 +11,7 @@ class Welcome(object):
 	
 	def start(self):
 		
-		print '''\n\n\t\t" SHAZAKIN "\n\n\n
+		print '''\n\n\t\t\t" SHAZAKIN "\n\n\n
 		\t  Chapter 1. The beginning\n
 		\nt's been a while since you were awake... young one
 		\nI'm glad you finally regained consciousness, I've been wating.
