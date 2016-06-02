@@ -1,5 +1,4 @@
 def choose_skill(number_of_skills):
-	heyhey = "Joe hey"
 	on = True
 	while on == True:
 		try:
