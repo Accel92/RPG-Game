@@ -1,36 +1,37 @@
 from choose_skill import choose_skill
+#from . import choose_skill
 
 class Player(object):
 
 	
 	def __init__(self):
-		self.exp = 0
-		self.level = 1
+		self.__exp = 0
+		self.__level = 1
 	
 	def set_name(self, name):
-		self.name = name
+		self.__name = name
 	
 	def set_stats(self, experience):
-		self.exp += experience
-		self.level = (self.exp + 100)//100
-		self.health = 100 + 50 *(self.level - 1)
-		self.mana = self.health
+		self.__exp += experience
+		self.__level = (self.__exp + 100)//100
+		self.__health = 100 + 50 *(self.__level - 1)
+		self.__mana = self.__health
 	
 	def set_spec(self, spec):
-		self.spec = spec
+		self.__spec = spec
 	
 	def set_skills(self):
 		'''use every time at the end of fight f-tion to 
 		set skills power according to newly gainsed exp'''
-		self.skills = self.spec.skillset()	
+		self.__skills = self.__spec.skillset()	
 		# skills_set_per_level is a f-tion of every profession
 		
 	def use_skill(self):
 		'''method used strictly inside fight function'''
 
-		number_of_skills = len(self.skills) 
-		skill_keys = sorted(self.skills)
-		skill_values = [value for (key, value) in sorted(self.skills.items())]
+		number_of_skills = len(self.__skills) 
+		skill_keys = sorted(self.__skills)
+		skill_values = [value for (key, value) in sorted(self.__skills.items())]
 		
 		i = 0
 		while i < number_of_skills:
@@ -43,29 +44,29 @@ class Player(object):
 		
 
 	def get_player(self):
-		print "Name: ", self.name
-		print "level: ", self.level
-		print "experience: ", self.exp
-		print "health: ", self.health
-		print "mana: ", self.mana
+		print "Name: ", self.__name
+		print "level: ", self.__level
+		print "experience: ", self.__exp
+		print "health: ", self.__health
+		print "mana: ", self.__mana
 		
 	def get_name(self):
-		return self.name
+		return self.__name
 
 	def get_level(self):
-		return self.level
+		return self.__level
 		
 	def get_exp(self):
-		return self.exp
+		return self.__exp
 		
 	def get_spec(self):
-		return self.spec
+		return self.__spec
 		
 	def get_skills(self):
-		return self.skills
+		return self.__skills
 		
 	def get_health(self):
-		return self.health
+		return self.__health
 		
 	def get_mana(self):
-		return self.mana
+		return self.__mana
