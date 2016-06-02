@@ -1,11 +1,14 @@
+from choose_skill import choose_skill
+
 class Player(object):
 
 	
-	def __init__(self, name):
-		self.name = name
+	def __init__(self):
 		self.exp = 0
 		self.level = 1
-		self.skills = {"nothing", 0}
+	
+	def set_name(self, name):
+		self.name = name
 	
 	def set_stats(self, experience):
 		self.exp += experience
@@ -15,7 +18,7 @@ class Player(object):
 	
 	def set_spec(self, spec):
 		self.spec = spec
-		
+	
 	def set_skills(self):
 		'''use every time at the end of fight f-tion to 
 		set skills power according to newly gainsed exp'''
@@ -26,29 +29,18 @@ class Player(object):
 		'''method used strictly inside fight function'''
 
 		number_of_skills = len(self.skills) 
-		print ""
-		print "What do you want to do?"
 		skill_keys = sorted(self.skills)
 		skill_values = [value for (key, value) in sorted(self.skills.items())]
-		#what_do = ""
 		
 		i = 0
 		while i < number_of_skills:
 			print skill_keys[i], skill_values[i], "dmg"
 			i += 1
 		
-		try:
-			what_do = int(raw_input("\n>"))
-		except ValueError:
-			print "Can't use it, try again.\n"
-			return self.use_skill()
+		what_do = choose_skill(number_of_skills)
+		return skill_values[what_do - 1]	#because iteration from 0
 		
-		if what_do > number_of_skills:
-			print "This skill is not unclocked yet"
-			print "(or it doesn't exist).\nTry again"
-			return self.use_skill()
-		else:
-			return skill_values[what_do - 1] # because iteration from 0
+		
 
 	def get_player(self):
 		print "Name: ", self.name
