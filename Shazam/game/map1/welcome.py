@@ -39,7 +39,7 @@ class Welcome(object):
 			else:
 				print wrong_choice
 		
-		my_player.name = name
+		my_player.set_name(name)
 		print "\nThat is correct, %s, now then... " % my_player.get_name()
 		print "Who are you, what is your speciality "
 		
@@ -58,7 +58,7 @@ class Welcome(object):
 		
 		my_player.set_spec(spec)
 		my_player.set_skills()
-		print "%s, the %s" %(my_player.get_name(), my_player.spec.profession_name) + ", that sounds good..."
+		print "%s, the %s" %(my_player.get_name(), my_player.get_spec().profession_name) + ", that sounds good..."
 		
 		while True:
 			print "\nWhat do you want to do now?\n"
