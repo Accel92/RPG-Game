@@ -60,5 +60,6 @@ class Fight(object):
 		else: 
 			print "You lose"
 			
-		my_player.set_stats()
-		my_player.set_skills()
+		#my_player.set_stats()
+		#my_player.set_skills()
+		#print "Your level is now %s" % my_player.get_level()
