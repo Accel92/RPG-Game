@@ -1,5 +1,6 @@
 # RPG-Game (2.7 Python)
-(switched to RPG-Game (3.5.1 Python), all further progress will be there)
+*switched to RPG-Game (3.5.1 Python), all further progress will be there
+
 A console RPG game project in Python 2.7.6 ;)
 
 Work in progress:
