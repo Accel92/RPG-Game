@@ -1,5 +1,6 @@
-# RPG-Game
-A console RPG game project in Python 2.7 ;)
+# RPG-Game (2.7 Python)
+<switched to RPG-Game (3.5.1 Python), all further progress will be there>
+A console RPG game project in Python 2.7.6 ;)
 
 Work in progress:
   - Plot consists of test locations, player professions (skills, leveling, scaling), mobs
